@@ -1,4 +1,4 @@
-import { useRouter } from "next/dist/client/router";
+import { useRouter } from "next/router";
 import Link, { LinkProps } from "next/link";
 import { ReactElement, cloneElement } from "react";
 
@@ -16,7 +16,7 @@ export function ActiveLink({ children, activeClassName, ...rest }: ActiveLinkPro
 
   return (
     <Link{ ...rest }>
-      {cloneElement(children, {
+      { cloneElement(children, {
         className,
       }) }
     </Link>
